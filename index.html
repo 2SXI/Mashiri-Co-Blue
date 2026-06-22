@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mashiri & Co. | Registered Public Accountants (Private) Limited</title>
+    <meta name="description" content="Mashiri & Co. Registered Public Accountants – Tax Advisory, Auditing, and Financial Consulting services in Harare, Zimbabwe. PAAB-certified. Trusted since 2019.">
+    <meta name="keywords" content="accountants harare, tax advisory zimbabwe, auditing firm harare, ZIMRA compliance, public accountants Zimbabwe, bookkeeping harare">
+    <meta property="og:title" content="Mashiri & Co. | Registered Public Accountants">
+    <meta property="og:description" content="Strategic Tax, Audit & Financial Consulting. Harare, Zimbabwe.">
+    <meta property="og:type" content="website">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --navy: #0b1a30;
+            --navy-mid: #122140;
+            --navy-light: #1a2f52;
+            --blue: #1d4ed8;
+            --blue-light: #3b6ee8;
+            --blue-pale: #eff6ff;
+            --blue-border: #dbeafe;
+            --slate-900: #0f172a;
+            --slate-800: #1e293b;
+            --slate-600: #475569;
+            --slate-400: #94a3b8;
+            --slate-200: #e2e8f0;
+            --slate-100: #f1f5f9;
+            --slate-50: #f8fafc;
+            --white: #ffffff;
+            --gold: #b8860b;
+            --serif: 'Playfair Display', Georgia, serif;
+            --sans: 'Public Sans', system-ui, sans-serif;
+            --mono: 'JetBrains Mono', monospace;
+        }
+
+        html { font-size: 16px; }
+        body { font-family: var(--sans); background: var(--white); color: var(--slate-800); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+
+        /* ── SCROLLBAR ── */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: var(--slate-100); }
+        ::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 2px; }
+
+        /* ── TYPOGRAPHY ── */
+        .serif { font-family: var(--serif); }
+        .mono { font-family: var(--mono); }
+
+        /* ── SUPER HEADER ── */
+        #super-header {
+            background: var(--navy);
+            color: rgba(255,255,255,0.65);
+            font-size: 0.72rem;
+            letter-spacing: 0.03em;
+            padding: 0.55rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        #super-header a { color: rgba(255,255,255,0.65); text-decoration: none; transition: color 0.2s; }
+        #super-header a:hover { color: #93c5fd; }
+        #super-header .container { display: flex; justify-content: space-between; align-items: center; }
+        #super-header .left { display: flex; gap: 1.5rem; align-items: center; }
+        #super-header .right { display: flex; gap: 1.5rem; align-items: center; }
+        #super-header i { color: #60a5fa; margin-right: 0.4rem; }
+
+        /* ── NAVIGATION ── */
+        #navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--white);
+            border-bottom: 1px solid var(--slate-200);
+            box-shadow: 0 1px 12px rgba(11,26,48,0.06);
+            transition: box-shadow 0.3s;
+        }
+        #navbar.scrolled { box-shadow: 0 4px 24px rgba(11,26,48,0.12); }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; height: 76px; }
+
+        .brand { display: flex; align-items: center; gap: 1rem; text-decoration: none; flex-shrink: 0; }
+        .brand-bar { width: 4px; height: 52px; background: var(--blue); flex-shrink: 0; }
+        .brand-text { display: flex; flex-direction: column; }
+        .brand-name { font-family: var(--serif); font-size: 1.6rem; font-weight: 700; color: var(--navy); line-height: 1.1; }
+        .brand-sub { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--slate-400); font-weight: 600; margin-top: 3px; }
+
+        .nav-links { display: flex; align-items: center; gap: 0.25rem; }
+        .nav-links a { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; color: var(--slate-600); text-decoration: none; padding: 0.5rem 0.85rem; border-radius: 4px; transition: color 0.2s, background 0.2s; white-space: nowrap; }
+        .nav-links a:hover { color: var(--blue); background: var(--blue-pale); }
+        .nav-links .nav-cta { background: var(--navy); color: var(--white); padding: 0.6rem 1.4rem; border-radius: 4px; margin-left: 0.5rem; }
+        .nav-links .nav-cta:hover { background: var(--blue); color: var(--white); }
+
+        /* Mobile hamburger */
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; border: none; background: none; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: var(--navy); border-radius: 2px; transition: all 0.3s; }
+        .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+        .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--navy); z-index: 999; flex-direction: column; justify-content: center; align-items: center; gap: 2rem; }
+        .mobile-menu.active { display: flex; }
+        .mobile-menu a { font-family: var(--serif); font-size: 2rem; color: var(--white); text-decoration: none; opacity: 0.9; transition: opacity 0.2s, color 0.2s; }
+        .mobile-menu a:hover { color: #93c5fd; opacity: 1; }
+        .mobile-menu .close-btn { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: var(--white); font-size: 1.5rem; cursor: pointer; padding: 0.5rem; }
+        .mobile-menu .mob-cta { background: var(--blue); color: var(--white) !important; padding: 0.85rem 2.5rem; border-radius: 4px; font-size: 1rem !important; font-family: var(--sans) !important; font-weight: 600; }
+
+        /* ── CONTAINERS ── */
+        .container { max-width: 1240px; margin: 0 auto; padding: 0 1.5rem; }
+        .section-pad { padding: 5.5rem 0; }
+        .section-pad-sm { padding: 3.5rem 0; }
+
+        /* ── SECTION LABELS ── */
+        .eyebrow { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.85rem; display: flex; align-items: center; gap: 0.6rem; }
+        .eyebrow::before { content: ''; display: block; width: 28px; height: 2px; background: var(--blue); flex-shrink: 0; }
+        .section-title { font-family: var(--serif); font-size: clamp(1.9rem, 4vw, 2.9rem); color: var(--navy); font-weight: 700; line-height: 1.2; }
+        .section-title em { color: var(--blue); font-style: italic; }
+        .section-intro { color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; max-width: 640px; margin-top: 1rem; }
+
+        /* ── BUTTONS ── */
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 0.875rem; letter-spacing: 0.03em; padding: 0.85rem 1.85rem; border-radius: 4px; text-decoration: none; transition: all 0.25s; cursor: pointer; border: 2px solid transparent; white-space: nowrap; }
+        .btn-primary { background: var(--blue); color: var(--white); border-color: var(--blue); }
+        .btn-primary:hover { background: var(--navy); border-color: var(--navy); }
+        .btn-outline { background: transparent; color: var(--navy); border-color: var(--slate-300); }
+        .btn-outline:hover { border-color: var(--blue); color: var(--blue); }
+        .btn-ghost { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.3); }
+        .btn-ghost:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.6); }
+        .btn-navy { background: var(--navy); color: var(--white); border-color: var(--navy); }
+        .btn-navy:hover { background: var(--blue); border-color: var(--blue); }
+
+        /* ── HERO ── */
+        #hero { background: var(--white); padding: 5rem 0 4rem; overflow: hidden; }
+        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--blue-pale); border: 1px solid var(--blue-border); color: var(--blue); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.4rem 0.9rem; border-radius: 100px; margin-bottom: 1.75rem; }
+        .hero-badge span { width: 6px; height: 6px; border-radius: 50%; background: var(--blue); display: block; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+        .hero-h1 { font-family: var(--serif); font-size: clamp(2.4rem, 5vw, 3.8rem); color: var(--navy); line-height: 1.12; font-weight: 700; margin-bottom: 1.5rem; }
+        .hero-h1 em { color: var(--blue); font-style: italic; display: block; }
+        .hero-desc { font-size: 1.05rem; color: var(--slate-600); line-height: 1.8; margin-bottom: 2.25rem; max-width: 520px; }
+        .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
+        .hero-trust { display: flex; align-items: center; gap: 1.25rem; padding: 1.25rem 1.5rem; border: 1px solid var(--slate-200); background: var(--slate-50); border-radius: 6px; border-left: 4px solid var(--blue); }
+        .hero-trust-icon { width: 44px; height: 44px; background: var(--blue-pale); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--blue); font-size: 1.1rem; flex-shrink: 0; }
+        .hero-trust strong { display: block; font-size: 0.875rem; color: var(--navy); font-weight: 700; }
+        .hero-trust span { font-size: 0.75rem; color: var(--slate-400); }
+
+        .hero-visual { position: relative; }
+        .hero-img-wrap { position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 24px 64px rgba(11,26,48,0.18); }
+        .hero-img-wrap img { width: 100%; height: 480px; object-fit: cover; display: block; }
+        .hero-img-wrap::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(11,26,48,0.3) 0%, transparent 60%); z-index: 1; }
+        .hero-card { position: absolute; bottom: -1.5rem; left: -1.5rem; background: var(--white); padding: 1.25rem 1.5rem; border-radius: 6px; box-shadow: 0 8px 32px rgba(11,26,48,0.14); border-top: 4px solid var(--blue); z-index: 2; min-width: 220px; }
+        .hero-card-stat { font-family: var(--serif); font-size: 1.6rem; font-weight: 700; color: var(--navy); }
+        .hero-card-stat em { color: var(--blue); font-style: normal; }
+        .hero-card-label { font-size: 0.72rem; color: var(--slate-400); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin-top: 2px; }
+        .hero-cert { position: absolute; top: 1.5rem; right: -1rem; background: var(--navy); color: var(--white); padding: 0.75rem 1rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-align: center; z-index: 2; line-height: 1.4; }
+        .hero-cert small { display: block; color: #60a5fa; font-size: 0.62rem; margin-top: 2px; }
+
+        /* ── STATS BAND ── */
+        #stats { background: var(--navy); color: var(--white); padding: 3.5rem 0; position: relative; overflow: hidden; }
+        #stats::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(29,78,216,0.15) 0%, transparent 60%); pointer-events: none; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+        .stat-item { text-align: center; padding: 1.5rem 2rem; border-right: 1px solid rgba(255,255,255,0.1); }
+        .stat-item:last-child { border-right: none; }
+        .stat-num { font-family: var(--serif); font-size: 2.6rem; font-weight: 700; color: var(--white); line-height: 1; margin-bottom: 0.4rem; }
+        .stat-num .accent { color: #60a5fa; }
+        .stat-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.14em; color: rgba(255,255,255,0.5); font-weight: 600; }
+
+        /* ── ABOUT ── */
+        #about { background: var(--white); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+        .about-img-col { position: relative; }
+        .about-img-main { width: 100%; height: 520px; object-fit: cover; border-radius: 6px; display: block; box-shadow: 0 16px 48px rgba(11,26,48,0.12); }
+        .about-cert-badge { position: absolute; bottom: -1.5rem; right: -1.5rem; background: var(--navy); color: var(--white); padding: 1.5rem; border-radius: 6px; box-shadow: 0 8px 32px rgba(11,26,48,0.2); text-align: center; min-width: 160px; }
+        .about-cert-badge .cert-num { font-family: var(--serif); font-size: 1.4rem; font-weight: 700; color: #60a5fa; display: block; }
+        .about-cert-badge .cert-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.6); margin-top: 4px; line-height: 1.4; }
+        .about-content { padding-top: 0.5rem; }
+        .about-values { margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
+        .value-pill { display: flex; align-items: center; gap: 0.6rem; padding: 0.7rem 1rem; background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 4px; font-size: 0.8rem; font-weight: 600; color: var(--slate-800); }
+        .value-pill i { color: var(--blue); font-size: 0.75rem; }
+        .about-directors { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--slate-200); }
+        .director-cards { display: flex; gap: 1rem; margin-top: 1rem; }
+        .director-card { flex: 1; padding: 1.25rem; background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 6px; }
+        .director-avatar { width: 48px; height: 48px; border-radius: 50%; background: var(--navy); display: flex; align-items: center; justify-content: center; color: var(--white); font-family: var(--serif); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; }
+        .director-name { font-size: 0.875rem; font-weight: 700; color: var(--navy); }
+        .director-role { font-size: 0.72rem; color: var(--blue); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin-top: 2px; }
+
+        /* ── SERVICES ── */
+        #services { background: var(--slate-50); }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
+        .service-card { background: var(--white); border: 1px solid var(--slate-200); border-radius: 6px; padding: 2.25rem; transition: all 0.3s; position: relative; overflow: hidden; }
+        .service-card::before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--blue); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
+        .service-card:hover { border-color: var(--blue-border); box-shadow: 0 12px 40px rgba(11,26,48,0.1); transform: translateY(-3px); }
+        .service-card:hover::before { transform: scaleX(1); }
+        .service-icon { width: 56px; height: 56px; border-radius: 8px; background: var(--blue-pale); display: flex; align-items: center; justify-content: center; color: var(--blue); font-size: 1.35rem; margin-bottom: 1.5rem; }
+        .service-card h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; color: var(--navy); margin-bottom: 0.75rem; }
+        .service-card p { font-size: 0.875rem; color: var(--slate-600); line-height: 1.75; margin-bottom: 1.5rem; }
+        .service-list { list-style: none; }
+        .service-list li { font-size: 0.8rem; color: var(--slate-600); padding: 0.35rem 0; border-bottom: 1px solid var(--slate-100); display: flex; align-items: center; gap: 0.6rem; }
+        .service-list li:last-child { border-bottom: none; }
+        .service-list li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); flex-shrink: 0; }
+        .service-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; font-weight: 700; color: var(--blue); text-decoration: none; margin-top: 1.25rem; transition: gap 0.2s; }
+        .service-link:hover { gap: 0.7rem; }
+
+        /* ── WHY US ── */
+        #why { background: var(--navy); color: var(--white); }
+        .why-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 5rem; align-items: center; }
+        .why-text .section-title { color: var(--white); }
+        .why-text .section-intro { color: rgba(255,255,255,0.65); max-width: 480px; }
+        .why-pillars { display: grid; gap: 1rem; margin-top: 2.5rem; }
+        .pillar { display: flex; gap: 1.25rem; align-items: flex-start; padding: 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; transition: background 0.2s; }
+        .pillar:hover { background: rgba(255,255,255,0.08); }
+        .pillar-num { font-family: var(--mono); font-size: 0.72rem; font-weight: 500; color: #60a5fa; background: rgba(96,165,250,0.12); padding: 0.3rem 0.6rem; border-radius: 4px; flex-shrink: 0; margin-top: 2px; }
+        .pillar h4 { font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 0.3rem; }
+        .pillar p { font-size: 0.8rem; color: rgba(255,255,255,0.55); line-height: 1.7; }
+        .why-visual { position: relative; }
+        .why-img { width: 100%; border-radius: 6px; display: block; height: 540px; object-fit: cover; opacity: 0.85; }
+        .why-cert-list { position: absolute; bottom: 2rem; right: -1rem; display: flex; flex-direction: column; gap: 0.75rem; }
+        .cert-badge { background: var(--white); color: var(--navy); padding: 0.85rem 1.25rem; border-radius: 6px; font-size: 0.75rem; font-weight: 700; box-shadow: 0 4px 16px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 0.6rem; }
+        .cert-badge i { color: var(--blue); }
+
+        /* ── HISTORY / TIMELINE ── */
+        #history { background: var(--white); }
+        .history-intro { max-width: 680px; }
+        .timeline { margin-top: 3.5rem; display: flex; flex-direction: column; gap: 0; }
+        .tl-item { display: grid; grid-template-columns: 200px 48px 1fr; gap: 0; align-items: start; }
+        .tl-date { text-align: right; padding-right: 1.5rem; padding-top: 0.25rem; }
+        .tl-date-label { font-family: var(--mono); font-size: 0.75rem; font-weight: 500; color: var(--blue); display: block; }
+        .tl-date-sub { font-size: 0.68rem; color: var(--slate-400); display: block; margin-top: 2px; }
+        .tl-spine { display: flex; flex-direction: column; align-items: center; }
+        .tl-dot { width: 14px; height: 14px; border-radius: 50%; background: var(--blue); border: 3px solid var(--blue-pale); flex-shrink: 0; margin-top: 0.3rem; }
+        .tl-line { flex: 1; width: 2px; background: var(--slate-200); min-height: 60px; }
+        .tl-item:last-child .tl-line { display: none; }
+        .tl-content { padding-left: 1.5rem; padding-bottom: 2.5rem; }
+        .tl-content h4 { font-size: 0.9rem; font-weight: 700; color: var(--navy); margin-bottom: 0.3rem; }
+        .tl-content .tl-company { font-size: 0.75rem; color: var(--blue); font-weight: 600; margin-bottom: 0.5rem; }
+        .tl-content p { font-size: 0.82rem; color: var(--slate-600); line-height: 1.7; }
+
+        /* ── TEAM / CREDENTIALS ── */
+        #team { background: var(--slate-50); }
+        .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
+        .team-card { background: var(--white); border: 1px solid var(--slate-200); border-radius: 6px; overflow: hidden; }
+        .team-card-top { background: var(--navy); padding: 2.5rem 2rem 1.5rem; position: relative; }
+        .team-initials { width: 72px; height: 72px; border-radius: 50%; background: var(--blue); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 1.6rem; font-weight: 700; color: var(--white); margin-bottom: 1rem; border: 4px solid rgba(255,255,255,0.15); }
+        .team-name { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; color: var(--white); }
+        .team-role { font-size: 0.72rem; color: #60a5fa; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600; margin-top: 4px; }
+        .team-card-body { padding: 1.75rem 2rem; }
+        .team-card-body p { font-size: 0.875rem; color: var(--slate-600); line-height: 1.75; }
+        .team-cert { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--blue-pale); color: var(--blue); font-size: 0.7rem; font-weight: 700; padding: 0.35rem 0.8rem; border-radius: 100px; margin-top: 1rem; margin-right: 0.5rem; }
+
+        /* ── CONTACT ── */
+        #contact { background: var(--white); }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 5rem; align-items: start; }
+        .contact-info { }
+        .contact-blocks { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+        .contact-block { display: flex; align-items: flex-start; gap: 1.25rem; padding: 1.25rem 1.5rem; background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 6px; }
+        .contact-block-icon { width: 44px; height: 44px; background: var(--blue-pale); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--blue); font-size: 1rem; flex-shrink: 0; }
+        .contact-block strong { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--slate-400); margin-bottom: 0.3rem; }
+        .contact-block p, .contact-block a { font-size: 0.9rem; color: var(--slate-800); text-decoration: none; line-height: 1.5; }
+        .contact-block a:hover { color: var(--blue); }
+        .whatsapp-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #25d366; color: var(--white); font-weight: 600; font-size: 0.8rem; padding: 0.6rem 1.25rem; border-radius: 4px; text-decoration: none; margin-top: 0.75rem; transition: background 0.2s; }
+        .whatsapp-btn:hover { background: #1ea952; }
+        .bank-details { margin-top: 1.75rem; padding: 1.5rem; background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 6px; border-left: 4px solid var(--gold); }
+        .bank-details h4 { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--slate-400); margin-bottom: 0.85rem; }
+        .bank-row { display: flex; justify-content: space-between; font-size: 0.82rem; padding: 0.3rem 0; border-bottom: 1px solid var(--slate-200); }
+        .bank-row:last-child { border-bottom: none; }
+        .bank-row span:first-child { color: var(--slate-400); font-weight: 500; }
+        .bank-row span:last-child { color: var(--navy); font-weight: 600; font-family: var(--mono); }
+
+        /* Contact form */
+        .contact-form-wrap { background: var(--navy); border-radius: 8px; padding: 2.5rem; position: relative; overflow: hidden; }
+        .contact-form-wrap::before { content: ''; position: absolute; top: -60px; right: -60px; width: 200px; height: 200px; border-radius: 50%; background: rgba(29,78,216,0.15); pointer-events: none; }
+        .form-eyebrow { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #60a5fa; margin-bottom: 0.5rem; }
+        .form-title { font-family: var(--serif); font-size: 1.6rem; color: var(--white); margin-bottom: 0.5rem; }
+        .form-desc { font-size: 0.82rem; color: rgba(255,255,255,0.5); margin-bottom: 2rem; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .form-group { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 1rem; }
+        .form-group label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); color: var(--white); padding: 0.75rem 1rem; border-radius: 4px; font-family: var(--sans); font-size: 0.875rem; outline: none; transition: border-color 0.2s, background 0.2s; }
+        .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #60a5fa; background: rgba(255,255,255,0.1); }
+        .form-group select option { background: var(--navy); color: var(--white); }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .form-submit { width: 100%; background: var(--blue); color: var(--white); border: none; padding: 1rem; border-radius: 4px; font-family: var(--sans); font-size: 0.875rem; font-weight: 700; letter-spacing: 0.06em; cursor: pointer; transition: background 0.2s; display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+        .form-submit:hover { background: var(--blue-light); }
+        .form-security { text-align: center; margin-top: 1rem; font-size: 0.7rem; color: rgba(255,255,255,0.3); display: flex; align-items: center; justify-content: center; gap: 0.4rem; }
+        .form-success { display: none; text-align: center; padding: 2rem; }
+        .form-success i { font-size: 3rem; color: #4ade80; margin-bottom: 1rem; }
+        .form-success h4 { color: var(--white); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .form-success p { color: rgba(255,255,255,0.6); font-size: 0.875rem; }
+
+        /* ── INSIGHTS / TAX UPDATES ── */
+        #insights { background: var(--slate-50); }
+        .insights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+        .insight-card { background: var(--white); border: 1px solid var(--slate-200); border-radius: 6px; overflow: hidden; transition: box-shadow 0.3s, transform 0.3s; }
+        .insight-card:hover { box-shadow: 0 12px 40px rgba(11,26,48,0.1); transform: translateY(-3px); }
+        .insight-card-top { padding: 1.5rem; border-bottom: 1px solid var(--slate-100); }
+        .insight-tag { display: inline-flex; align-items: center; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--blue); background: var(--blue-pale); padding: 0.25rem 0.6rem; border-radius: 100px; margin-bottom: 0.85rem; }
+        .insight-card h4 { font-family: var(--serif); font-size: 1rem; font-weight: 600; color: var(--navy); line-height: 1.4; margin-bottom: 0.5rem; }
+        .insight-card p { font-size: 0.8rem; color: var(--slate-600); line-height: 1.7; }
+        .insight-card-bottom { padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+        .insight-date { font-size: 0.72rem; color: var(--slate-400); font-family: var(--mono); }
+        .insight-link { font-size: 0.75rem; font-weight: 700; color: var(--blue); text-decoration: none; display: flex; align-items: center; gap: 0.3rem; }
+
+        /* ── FOOTER ── */
+        footer { background: #060e1a; color: rgba(255,255,255,0.5); }
+        .footer-top { padding: 4rem 0 3rem; }
+        .footer-grid { display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 3rem; }
+        .footer-brand .brand-name { font-size: 1.6rem; color: var(--white); display: block; margin-bottom: 0.3rem; }
+        .footer-brand .brand-sub { font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+        .footer-tagline { font-size: 0.8rem; line-height: 1.75; margin: 1.25rem 0; color: rgba(255,255,255,0.4); max-width: 280px; }
+        .footer-reg { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1.5rem; }
+        .footer-reg-badge { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); border: 1px solid rgba(255,255,255,0.1); padding: 0.4rem 0.85rem; border-radius: 4px; width: fit-content; }
+        .footer-reg-badge i { color: #60a5fa; }
+        footer h5 { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: rgba(255,255,255,0.7); margin-bottom: 1.25rem; }
+        footer ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+        footer ul li a { font-size: 0.82rem; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+        footer ul li a:hover { color: #93c5fd; }
+        .footer-bottom { padding: 1.5rem 0; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .footer-bottom p { font-size: 0.75rem; }
+        .footer-bottom-links { display: flex; gap: 1.5rem; }
+        .footer-bottom-links a { font-size: 0.75rem; color: rgba(255,255,255,0.35); text-decoration: none; }
+        .footer-bottom-links a:hover { color: rgba(255,255,255,0.7); }
+        .footer-divider { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin: 0; }
+
+        /* ── BACK TO TOP ── */
+        #back-top { position: fixed; bottom: 2rem; right: 2rem; width: 44px; height: 44px; background: var(--blue); color: var(--white); border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; box-shadow: 0 4px 16px rgba(29,78,216,0.35); opacity: 0; transform: translateY(12px); transition: all 0.3s; pointer-events: none; z-index: 900; }
+        #back-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+        #back-top:hover { background: var(--navy); }
+
+        /* ── SCROLL ANIMATIONS ── */
+        .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 1024px) {
+            .hero-grid, .about-grid, .why-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .services-grid { grid-template-columns: 1fr 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+            .stat-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.1); }
+            .stat-item:nth-last-child(-n+2) { border-bottom: none; }
+            .hero-visual { order: -1; }
+            .about-img-col { order: -1; }
+            .hero-cert { display: none; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+            .why-visual { display: none; }
+            .team-grid { grid-template-columns: 1fr; }
+            .insights-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            #super-header .left { display: none; }
+            .services-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .about-values { grid-template-columns: 1fr; }
+            .director-cards { flex-direction: column; }
+            .tl-item { grid-template-columns: 80px 36px 1fr; }
+            .tl-date-label { font-size: 0.65rem; }
+            .form-row { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            .insights-grid { grid-template-columns: 1fr; }
+            .hero-card { display: none; }
+            .about-cert-badge { display: none; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-actions { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+            .hero-h1 { font-size: 2.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" id="closeMenu" aria-label="Close menu"><i class="fas fa-times"></i></button>
+    <a href="#about" onclick="closeMob()">Firm Profile</a>
+    <a href="#services" onclick="closeMob()">Our Services</a>
+    <a href="#team" onclick="closeMob()">Our Team</a>
+    <a href="#insights" onclick="closeMob()">Tax Updates</a>
+    <a href="#contact" onclick="closeMob()" class="mob-cta">Request Consultation</a>
+</div>
+
+<!-- Super Header -->
+<div id="super-header">
+    <div class="container">
+        <div class="left">
+            <span><i class="fas fa-map-marker-alt"></i> 6th Floor, Batanai Gardens, 57 Jason Moyo Ave, Harare</span>
+            <span><i class="fas fa-shield-alt"></i> Reg. No. 62045A02102025 &mdash; CIPZ Verified</span>
+        </div>
+        <div class="right">
+            <a href="mailto:acaciafinancials@gmail.com"><i class="fas fa-envelope"></i> acaciafinancials@gmail.com</a>
+            <a href="tel:+2630783545876"><i class="fas fa-phone"></i> <strong style="color:rgba(255,255,255,0.9)">0783 545 876</strong></a>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation -->
+<nav id="navbar">
+    <div class="container nav-inner">
+        <a href="#" class="brand">
+            <div class="brand-bar"></div>
+            <div class="brand-text">
+                <span class="brand-name">Mashiri & Co.</span>
+                <span class="brand-sub">Registered Public Accountants</span>
+            </div>
+        </a>
+        <div class="nav-links">
+            <a href="#about">Firm Profile</a>
+            <a href="#services">Expertise & Services</a>
+            <a href="#team">Our Team</a>
+            <a href="#history">Track Record</a>
+            <a href="#insights">Tax Updates</a>
+            <a href="#contact" class="nav-cta">Request Consultation</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section id="hero">
+    <div class="container">
+        <div class="hero-grid">
+            <!-- Left: Text -->
+            <div>
+                <div class="hero-badge"><span></span> PAAB-Certified Practice &bull; Harare, Zimbabwe</div>
+                <h1 class="hero-h1">
+                    Strategic Financial<br>
+                    <em>Clarity & Precision.</em>
+                </h1>
+                <p class="hero-desc">
+                    Mashiri & Co. provides bespoke Tax Advisory, Statutory Auditing, and full-spectrum Financial Consulting to growing enterprises and established corporates across Zimbabwe.
+                </p>
+                <div class="hero-actions">
+                    <a href="#services" class="btn btn-primary"><i class="fas fa-briefcase"></i> Explore Our Services</a>
+                    <a href="#contact" class="btn btn-outline"><i class="fas fa-calendar-check"></i> Book a Consultation</a>
+                </div>
+                <div class="hero-trust">
+                    <div class="hero-trust-icon"><i class="fas fa-certificate"></i></div>
+                    <div>
+                        <strong>Officially Registered &amp; PAAB Certified</strong>
+                        <span>Practising Certificate No. 148 &bull; Incorporated 24 June 2019</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Right: Visual -->
+            <div class="hero-visual">
+                <div class="hero-cert">ZIMRA<br>Compliant<small>Tax Clearance Active</small></div>
+                <div class="hero-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1000&q=80" alt="Financial advisory and accounting services in Harare Zimbabwe">
+                    <div class="hero-card">
+                        <div class="hero-card-stat">2019 <em>&rarr; Now</em></div>
+                        <div class="hero-card-label">Serving Zimbabwe's Business Community</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Band -->
+<section id="stats">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item fade-up">
+                <div class="stat-num">5<span class="accent">+</span></div>
+                <div class="stat-label">Years of Practice</div>
+            </div>
+            <div class="stat-item fade-up">
+                <div class="stat-num">100<span class="accent">%</span></div>
+                <div class="stat-label">Client Confidentiality</div>
+            </div>
+            <div class="stat-item fade-up">
+                <div class="stat-num">3</div>
+                <div class="stat-label">Core Service Disciplines</div>
+            </div>
+            <div class="stat-item fade-up">
+                <div class="stat-num">IFRS<span class="accent">✓</span></div>
+                <div class="stat-label">Standards Compliance</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about" class="section-pad">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-img-col fade-up">
+                <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80" alt="Professional accountants at work Harare" class="about-img-main">
+                <div class="about-cert-badge">
+                    <span class="cert-num">No. 148</span>
+                    <span class="cert-label">PAAB Practising Certificate</span>
+                </div>
+            </div>
+            <div class="about-content fade-up">
+                <div class="eyebrow">Firm Profile</div>
+                <h2 class="section-title">Precision, Integrity, and <em>Professional Excellence</em></h2>
+                <p class="section-intro">Incorporated on 24 June 2019, Mashiri & Co. Registered Public Accountants (Private) Limited offers a broad range of fully integrated Tax, Audit, and Consulting services &mdash; tailored to provide an effective route to achieve your business ambitions.</p>
+                <p style="font-size:0.875rem;color:var(--slate-600);line-height:1.8;margin-top:1rem;">Our firm maintains rigorous compliance with International Financial Reporting Standards (IFRS), enforces strict quality control, and conducts peer reviews to ensure every engagement delivers maximum value and assurance to our clients.</p>
+
+                <div class="about-values">
+                    <div class="value-pill"><i class="fas fa-check-circle"></i> Reliability</div>
+                    <div class="value-pill"><i class="fas fa-check-circle"></i> Integrity</div>
+                    <div class="value-pill"><i class="fas fa-check-circle"></i> Good Governance</div>
+                    <div class="value-pill"><i class="fas fa-check-circle"></i> Honesty</div>
+                    <div class="value-pill"><i class="fas fa-check-circle"></i> Teamwork</div>
+                    <div class="value-pill"><i class="fas fa-check-circle"></i> IFRS Compliance</div>
+                </div>
+
+                <div class="about-directors">
+                    <p style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:var(--slate-400);">Management Team</p>
+                    <div class="director-cards">
+                        <div class="director-card">
+                            <div class="director-avatar">CM</div>
+                            <div class="director-name">Cleopas T. Mashiri</div>
+                            <div class="director-role">Managing Director</div>
+                        </div>
+                        <div class="director-card">
+                            <div class="director-avatar">PM</div>
+                            <div class="director-name">Portifa Musekiwa</div>
+                            <div class="director-role">Executive Director</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="section-pad">
+    <div class="container">
+        <div class="fade-up">
+            <div class="eyebrow">Expertise & Services</div>
+            <h2 class="section-title">Integrated Financial <em>Solutions</em></h2>
+            <p class="section-intro">We bring decades of collective experience to every client engagement — delivering tax strategy, assurance, and financial management services that drive real business outcomes.</p>
+        </div>
+        <div class="services-grid">
+            <!-- Taxation -->
+            <div class="service-card fade-up">
+                <div class="service-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                <h3>Taxation</h3>
+                <p>Our tax experts navigate the full complexity of Zimbabwean and ZIMRA tax law, keeping you current and compliant while minimising your liability.</p>
+                <ul class="service-list">
+                    <li>Income Tax Returns (Online ZIMRA)</li>
+                    <li>PAYE & Payroll Tax Compliance</li>
+                    <li>VAT Registration & Returns</li>
+                    <li>Tax Planning & Advisory</li>
+                    <li>ZIMRA Dispute Resolution</li>
+                    <li>Corporate & Personal Tax</li>
+                </ul>
+                <a href="#contact" class="service-link">Inquire About Tax Services <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <!-- Auditing -->
+            <div class="service-card fade-up">
+                <div class="service-icon"><i class="fas fa-search-dollar"></i></div>
+                <h3>Auditing & Assurance</h3>
+                <p>Rigorous, independent audit services that guarantee stakeholder confidence, reveal operational risk, and identify capital leaks across your business.</p>
+                <ul class="service-list">
+                    <li>Statutory Annual Audits</li>
+                    <li>Audit & Assurance Engagements</li>
+                    <li>Internal Audit Reviews</li>
+                    <li>Forensic Audit Investigations</li>
+                    <li>Management Letters</li>
+                    <li>Risk Assessment Reports</li>
+                </ul>
+                <a href="#contact" class="service-link">Inquire About Audit Services <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <!-- Consulting -->
+            <div class="service-card fade-up">
+                <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Consulting & Advisory</h3>
+                <p>Strategic financial advisory spanning bookkeeping to mergers &amp; acquisitions, supporting both ambitious growth and disciplined financial management.</p>
+                <ul class="service-list">
+                    <li>Bookkeeping & Accounting Systems</li>
+                    <li>Forecasting & Budget Preparation</li>
+                    <li>Management & Year-End Accounts</li>
+                    <li>Payroll Management</li>
+                    <li>Company Secretarial Services</li>
+                    <li>Business Proposals & Valuations</li>
+                </ul>
+                <a href="#contact" class="service-link">Inquire About Consulting <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <!-- Company Secretarial -->
+            <div class="service-card fade-up">
+                <div class="service-icon"><i class="fas fa-building"></i></div>
+                <h3>Company Secretarial</h3>
+                <p>Full company formation and ongoing secretarial compliance to keep your corporate structure in good standing with the Companies and Other Business Entities Act.</p>
+                <ul class="service-list">
+                    <li>Company Registration (CIPZ)</li>
+                    <li>Statutory Returns Filing</li>
+                    <li>ZIMRA Registration</li>
+                    <li>Board Minutes & Resolutions</li>
+                    <li>Registered Office Services</li>
+                </ul>
+                <a href="#contact" class="service-link">Inquire About Secretarial <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <!-- Financial Due Diligence -->
+            <div class="service-card fade-up">
+                <div class="service-icon"><i class="fas fa-handshake"></i></div>
+                <h3>Due Diligence & M&A</h3>
+                <p>Comprehensive financial due diligence for investors, acquirers, and boards — protecting your interests before you commit to any material transaction.</p>
+                <ul class="service-list">
+                    <li>Financial Due Diligence</li>
+                    <li>Business Proposals & Tenders</li>
+                    <li>Mergers & Acquisitions Support</li>
+                    <li>Company Valuations</li>
+                    <li>Investment Analysis</li>
+                </ul>
+                <a href="#contact" class="service-link">Inquire About M&A Services <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <!-- Financial Modelling -->
+            <div class="service-card fade-up">
+                <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3>Financial Modelling</h3>
+                <p>Bespoke financial models supporting funding applications, tender bids, and strategic decision-making — including computerised accounting system setup.</p>
+                <ul class="service-list">
+                    <li>Business Proposal Modelling</li>
+                    <li>Tender Financial Projections</li>
+                    <li>Quickbooks & FinCon Setup</li>
+                    <li>Chart of Accounts Design</li>
+                    <li>Internal Controls Implementation</li>
+                </ul>
+                <a href="#contact" class="service-link">Inquire About Modelling <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Us -->
+<section id="why" class="section-pad">
+    <div class="container">
+        <div class="why-grid">
+            <div class="why-text">
+                <div class="eyebrow" style="color:#60a5fa;"><span style="background:#60a5fa;"></span> Why Mashiri & Co.</div>
+                <h2 class="section-title" style="color:var(--white);">Your Partner in <em style="color:#60a5fa;">Financial Discipline</em></h2>
+                <p class="section-intro">We combine technical mastery with a deep understanding of Zimbabwe's commercial environment — delivering outcomes your business can rely on, year after year.</p>
+                <div class="why-pillars fade-up">
+                    <div class="pillar">
+                        <span class="pillar-num">01</span>
+                        <div>
+                            <h4>PAAB-Certified Expertise</h4>
+                            <p>Our Managing Director holds Practising Certificate No. 148 issued by the Public Accountants and Auditors Board of Zimbabwe — your assurance of professional standing.</p>
+                        </div>
+                    </div>
+                    <div class="pillar">
+                        <span class="pillar-num">02</span>
+                        <div>
+                            <h4>ZIMRA Compliance Specialists</h4>
+                            <p>Active Tax Clearance Certificate (ITF263) and deep, current knowledge of ZIMRA obligations ensure your tax position is always satisfactory and defensible.</p>
+                        </div>
+                    </div>
+                    <div class="pillar">
+                        <span class="pillar-num">03</span>
+                        <div>
+                            <h4>IFRS-Aligned Reporting</h4>
+                            <p>All engagements conform fully to International Financial Reporting Standards — critical for investor confidence and financial institution credibility.</p>
+                        </div>
+                    </div>
+                    <div class="pillar">
+                        <span class="pillar-num">04</span>
+                        <div>
+                            <h4>Multi-Industry Track Record</h4>
+                            <p>Proven delivery across hospitality, contract farming, debt collection, irrigation, and professional services — versatile expertise, consistent quality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="why-visual">
+                <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=800&q=80" alt="Professional accounting firm Zimbabwe" class="why-img">
+                <div class="why-cert-list">
+                    <div class="cert-badge"><i class="fas fa-certificate"></i> PAAB Certified</div>
+                    <div class="cert-badge"><i class="fas fa-file-alt"></i> ZIMRA Cleared 2026</div>
+                    <div class="cert-badge"><i class="fas fa-building"></i> CIPZ Registered</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Track Record / History -->
+<section id="history" class="section-pad">
+    <div class="container">
+        <div class="history-intro fade-up">
+            <div class="eyebrow">Track Record</div>
+            <h2 class="section-title">Consulting <em>Engagements</em></h2>
+            <p class="section-intro">A selection of key client engagements that demonstrate our breadth of expertise across sectors and service disciplines.</p>
+        </div>
+        <div class="timeline">
+            <div class="tl-item fade-up">
+                <div class="tl-date">
+                    <span class="tl-date-label">Sep 2020 &mdash; Present</span>
+                    <span class="tl-date-sub">Ongoing</span>
+                </div>
+                <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+                <div class="tl-content">
+                    <div class="tl-company">Leguminosea (Pvt) Ltd &bull; Contract Farming & Seed Marketing</div>
+                    <h4>Consulting Accountant</h4>
+                    <p>Set up manual and computerised (FinCon) accounting systems; implemented internal controls; provided ongoing ZIMRA tax compliance including Income Tax, PAYE, and VAT; training of accounting graduate; and advisory services to the Board of Directors.</p>
+                </div>
+            </div>
+            <div class="tl-item fade-up">
+                <div class="tl-date">
+                    <span class="tl-date-label">Jan 2017 &mdash; Present</span>
+                    <span class="tl-date-sub">Ongoing</span>
+                </div>
+                <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+                <div class="tl-content">
+                    <div class="tl-company">Laxcon (Pvt) Ltd &bull; Debt Collection</div>
+                    <h4>Consulting Accountant</h4>
+                    <p>Established full manual accounting system infrastructure; provided tax consulting services; delivered strategic advisory to the Board of Directors on an ongoing basis.</p>
+                </div>
+            </div>
+            <div class="tl-item fade-up">
+                <div class="tl-date">
+                    <span class="tl-date-label">Jan 2017 &mdash; Present</span>
+                    <span class="tl-date-sub">Ongoing</span>
+                </div>
+                <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+                <div class="tl-content">
+                    <div class="tl-company">Prime Irrigation (Pvt) Ltd &bull; Irrigation Equipment</div>
+                    <h4>Tax Consultant</h4>
+                    <p>Handled company registration with Deeds and Companies Registry; ZIMRA registration; and delivered continuous tax consulting services for the business.</p>
+                </div>
+            </div>
+            <div class="tl-item fade-up">
+                <div class="tl-date">
+                    <span class="tl-date-label">May 2019 &mdash; Mar 2020</span>
+                    <span class="tl-date-sub">Completed</span>
+                </div>
+                <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+                <div class="tl-content">
+                    <div class="tl-company">Tropicana Hospitality (Pvt) Ltd &bull; Hotels & Guest Lodges</div>
+                    <h4>Consulting Accountant</h4>
+                    <p>Set up accounting systems for four properties (Harare, Gweru, Kwekwe); implemented Quickbooks; provided tax consulting; recruited and trained two accounting graduates as Bookkeepers; and delivered Board advisory across the Tropicana Hospitality group.</p>
+                </div>
+            </div>
+            <div class="tl-item fade-up">
+                <div class="tl-date">
+                    <span class="tl-date-label">Jan 2019 &mdash; Mar 2019</span>
+                    <span class="tl-date-sub">Completed</span>
+                </div>
+                <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+                <div class="tl-content">
+                    <div class="tl-company">Mhukahuru Tours (Ossessione Pvt Ltd) &bull; Hospitality & Tourism</div>
+                    <h4>Financial Modelling Consultant</h4>
+                    <p>Developed financial models for two separate Tender applications for proposed semi-permanent tourism accommodation at Darwendale and Hwange Recreational Parks. <strong style="color:var(--blue);">Client was awarded a 25-year lease for a Photographic Facility at Darwendale Recreational Park.</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team -->
+<section id="team" class="section-pad">
+    <div class="container">
+        <div class="fade-up" style="max-width:600px;">
+            <div class="eyebrow">Our Team</div>
+            <h2 class="section-title">The People Behind <em>Your Finances</em></h2>
+            <p class="section-intro">Led by experienced, certified professionals committed to your financial success and long-term business growth.</p>
+        </div>
+        <div class="team-grid">
+            <div class="team-card fade-up">
+                <div class="team-card-top">
+                    <div class="team-initials">CM</div>
+                    <div class="team-name">Cleopas T. Mashiri</div>
+                    <div class="team-role">Managing Director &bull; Founder</div>
+                </div>
+                <div class="team-card-body">
+                    <p>Cleopas is a PAAB-certified Public Accountant with extensive experience spanning taxation, auditing, financial modelling, and corporate consulting. He has personally delivered successful engagements for clients in hospitality, agriculture, debt collection, irrigation, and tourism sectors across Zimbabwe.</p>
+                    <div>
+                        <span class="team-cert"><i class="fas fa-certificate"></i> PAAB Cert. No. 148</span>
+                        <span class="team-cert"><i class="fas fa-building"></i> Managing Director</span>
+                        <span class="team-cert"><i class="fas fa-file-alt"></i> ZIMRA Registered</span>
+                    </div>
+                </div>
+            </div>
+            <div class="team-card fade-up">
+                <div class="team-card-top" style="background:var(--navy-light);">
+                    <div class="team-initials" style="background:var(--navy);">PM</div>
+                    <div class="team-name">Portifa Musekiwa</div>
+                    <div class="team-role">Executive Director</div>
+                </div>
+                <div class="team-card-body">
+                    <p>Portifa serves as Executive Director of Mashiri & Co., bringing strategic leadership and corporate governance expertise to the firm. Together with the Managing Director, he ensures all engagements meet the highest professional and ethical standards required of a registered public accounting practice.</p>
+                    <div>
+                        <span class="team-cert"><i class="fas fa-user-tie"></i> Executive Director</span>
+                        <span class="team-cert"><i class="fas fa-shield-alt"></i> Good Governance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tax Insights -->
+<section id="insights" class="section-pad">
+    <div class="container">
+        <div class="fade-up" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem;">
+            <div>
+                <div class="eyebrow">Tax Updates & Insights</div>
+                <h2 class="section-title">Staying Ahead of <em>ZIMRA Changes</em></h2>
+            </div>
+            <a href="#contact" class="btn btn-outline" style="flex-shrink:0;margin-bottom:0.5rem;">Subscribe for Updates</a>
+        </div>
+        <div class="insights-grid">
+            <div class="insight-card fade-up">
+                <div class="insight-card-top">
+                    <div class="insight-tag">VAT</div>
+                    <h4>VAT Registration Thresholds in Zimbabwe: What Businesses Need to Know</h4>
+                    <p>Understanding when your business is required to register for VAT with ZIMRA, the filing frequency requirements, and the implications of late registration.</p>
+                </div>
+                <div class="insight-card-bottom">
+                    <span class="insight-date">2026</span>
+                    <a href="#contact" class="insight-link">Get Advice <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="insight-card fade-up">
+                <div class="insight-card-top">
+                    <div class="insight-tag">Income Tax</div>
+                    <h4>2026 Corporate Tax Rates & Allowable Deductions for Zimbabwean Businesses</h4>
+                    <p>A practical overview of current corporate tax rates, allowable deductions, and strategic planning opportunities available under the current Finance Act.</p>
+                </div>
+                <div class="insight-card-bottom">
+                    <span class="insight-date">2026</span>
+                    <a href="#contact" class="insight-link">Get Advice <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="insight-card fade-up">
+                <div class="insight-card-top">
+                    <div class="insight-tag">PAYE</div>
+                    <h4>PAYE Compliance Obligations: Monthly Returns, Penalties & Common Errors</h4>
+                    <p>Key PAYE obligations for employers in Zimbabwe, including submission deadlines, common compliance errors, and how to avoid costly ZIMRA penalties.</p>
+                </div>
+                <div class="insight-card-bottom">
+                    <span class="insight-date">2026</span>
+                    <a href="#contact" class="insight-link">Get Advice <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section-pad" style="background:var(--white);">
+    <div class="container">
+        <div class="fade-up" style="max-width:600px;margin-bottom:3.5rem;">
+            <div class="eyebrow">Get In Touch</div>
+            <h2 class="section-title">Schedule a <em>Consultation</em></h2>
+            <p class="section-intro">Financial clarity begins with a conversation. Reach out to our team and a dedicated accountant will formulate a preliminary review for your business.</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info fade-up">
+                <div class="contact-blocks">
+                    <div class="contact-block">
+                        <div class="contact-block-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <strong>Firm Headquarters</strong>
+                            <p>6th Floor, Batanai Gardens<br>57 Jason Moyo Avenue<br>Harare Central Business District, Zimbabwe</p>
+                        </div>
+                    </div>
+                    <div class="contact-block">
+                        <div class="contact-block-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <strong>Direct Contact Lines</strong>
+                            <p><a href="tel:+2630783545876">0783 545 876</a> &nbsp;/&nbsp; <a href="tel:+2630718794615">0718 794 615</a></p>
+                            <a href="https://wa.me/2630783545876?text=Hello%20Mashiri%20%26%20Co.%2C%20I%20would%20like%20to%20request%20a%20consultation." class="whatsapp-btn" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+                        </div>
+                    </div>
+                    <div class="contact-block">
+                        <div class="contact-block-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <strong>Email Address</strong>
+                            <a href="mailto:acaciafinancials@gmail.com" style="color:var(--blue);">acaciafinancials@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-block">
+                        <div class="contact-block-icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <strong>Business Hours</strong>
+                            <p>Monday – Friday: 8:00am – 5:00pm<br>Saturday: 8:00am – 12:00pm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bank-details fade-up">
+                    <h4><i class="fas fa-university" style="color:var(--gold);margin-right:0.5rem;"></i> Banking Details</h4>
+                    <div class="bank-row"><span>Account Name</span><span>Mashiri & Co. Reg. Public Accountants (Pvt) Ltd</span></div>
+                    <div class="bank-row"><span>Bank</span><span>CBZ Bank Limited (ZWL)</span></div>
+                    <div class="bank-row"><span>Account No.</span><span>02125670720014</span></div>
+                    <div class="bank-row"><span>Branch</span><span>Selous Branch, Harare</span></div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="contact-form-wrap fade-up">
+                <div id="contactFormInner">
+                    <div class="form-eyebrow">Confidential Inquiry</div>
+                    <div class="form-title">Request a Consultation</div>
+                    <div class="form-desc">Submit your details below and a qualified accountant will contact you within one business day.</div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" id="fname" placeholder="e.g. Tendai Moyo">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" id="fphone" placeholder="e.g. 0773 000 000">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" id="femail" placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Company / Organisation Name</label>
+                        <input type="text" id="fcompany" placeholder="Registered company name">
+                    </div>
+                    <div class="form-group">
+                        <label>Service Required</label>
+                        <select id="fservice">
+                            <option value="">— Select a Service —</option>
+                            <option>Taxation & ZIMRA Compliance</option>
+                            <option>Auditing & Assurance</option>
+                            <option>Bookkeeping & Accounting</option>
+                            <option>Financial Consulting & Advisory</option>
+                            <option>Company Secretarial Services</option>
+                            <option>Financial Due Diligence & M&A</option>
+                            <option>Financial Modelling & Proposals</option>
+                            <option>Other / General Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Brief Description of Your Requirement</label>
+                        <textarea id="fmessage" placeholder="Describe your situation or what you need assistance with…"></textarea>
+                    </div>
+                    <button class="form-submit" onclick="submitForm()">
+                        <i class="fas fa-paper-plane"></i> Submit Inquiry
+                    </button>
+                    <p class="form-security"><i class="fas fa-lock"></i> All submissions are handled in strict confidence by our accounting team.</p>
+                </div>
+                <div class="form-success" id="formSuccess">
+                    <i class="fas fa-check-circle"></i>
+                    <h4>Inquiry Received</h4>
+                    <p>Thank you. A member of our team will contact you within one business day to discuss your requirements.</p>
+                    <a href="https://wa.me/2630783545876" class="btn btn-ghost" style="margin-top:1.5rem;" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Also Chat on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="serif brand-name">Mashiri & Co.</span>
+                    <span class="brand-sub">Registered Public Accountants (Private) Limited</span>
+                    <p class="footer-tagline">Specialized Tax, Audit and Financial Consulting committed to precision, integrity, and the long-term financial health of Zimbabwe's business community.</p>
+                    <div class="footer-reg">
+                        <div class="footer-reg-badge"><i class="fas fa-certificate"></i> PAAB Practising Certificate No. 148</div>
+                        <div class="footer-reg-badge"><i class="fas fa-building"></i> Reg. No. 62045A02102025</div>
+                        <div class="footer-reg-badge"><i class="fas fa-file-alt"></i> ZIMRA Tax Clearance Active 2026</div>
+                    </div>
+                </div>
+                <div>
+                    <h5>Services</h5>
+                    <ul>
+                        <li><a href="#services">Taxation & ZIMRA Compliance</a></li>
+                        <li><a href="#services">Auditing & Assurance</a></li>
+                        <li><a href="#services">Bookkeeping & Accounting</a></li>
+                        <li><a href="#services">Financial Consulting</a></li>
+                        <li><a href="#services">Company Secretarial</a></li>
+                        <li><a href="#services">Financial Due Diligence</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#about">Firm Profile</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#history">Track Record</a></li>
+                        <li><a href="#insights">Tax Updates</a></li>
+                        <li><a href="#contact">Request Consultation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Regulatory Resources</h5>
+                    <ul>
+                        <li><a href="https://www.zimra.co.zw" target="_blank" rel="noopener">ZIMRA Official Portal</a></li>
+                        <li><a href="https://www.cipz.gov.zw" target="_blank" rel="noopener">CIPZ – Companies Office</a></li>
+                        <li><a href="https://mytaxselfservice.zimra.co.zw" target="_blank" rel="noopener">ZIMRA Self Service Portal</a></li>
+                        <li><a href="#contact">Get a Tax Consultation</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="container footer-bottom">
+        <p>&copy; 2026 Mashiri & Co. Registered Public Accountants (Private) Limited. All Rights Reserved.</p>
+        <div class="footer-bottom-links">
+            <a href="#about">Privacy Policy</a>
+            <a href="#about">Terms of Engagement</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to Top -->
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<script>
+    // ── Navbar scroll shadow
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 40);
+        document.getElementById('back-top').classList.toggle('visible', window.scrollY > 400);
+    });
+
+    // ── Mobile menu
+    const ham = document.getElementById('hamburger');
+    const mob = document.getElementById('mobileMenu');
+    const close = document.getElementById('closeMenu');
+    ham.addEventListener('click', () => { mob.classList.add('active'); ham.classList.add('open'); document.body.style.overflow='hidden'; });
+    close.addEventListener('click', closeMob);
+    function closeMob() { mob.classList.remove('active'); ham.classList.remove('open'); document.body.style.overflow=''; }
+
+    // ── Scroll animations
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+    // ── Counter animation
+    function animateCounter(el, target, suffix) {
+        let start = 0;
+        const duration = 1600;
+        const step = (timestamp) => {
+            if (!start) start = timestamp;
+            const progress = Math.min((timestamp - start) / duration, 1);
+            const val = Math.floor(progress * target);
+            el.textContent = val + suffix;
+            if (progress < 1) requestAnimationFrame(step);
+            else el.textContent = target + suffix;
+        };
+        requestAnimationFrame(step);
+    }
+
+    // ── Form submit handler
+    function submitForm() {
+        const name = document.getElementById('fname').value.trim();
+        const phone = document.getElementById('fphone').value.trim();
+        const email = document.getElementById('femail').value.trim();
+        if (!name || !phone) { alert('Please provide your name and phone number.'); return; }
+        // Build WhatsApp message
+        const svc = document.getElementById('fservice').value;
+        const msg = document.getElementById('fmessage').value.trim();
+        const company = document.getElementById('fcompany').value.trim();
+        const waMsg = `Hello Mashiri & Co.,\n\nNew Consultation Request:\nName: ${name}\nPhone: ${phone}${email ? '\nEmail: ' + email : ''}${company ? '\nCompany: ' + company : ''}${svc ? '\nService: ' + svc : ''}${msg ? '\n\nMessage: ' + msg : ''}`;
+        // Send to WhatsApp
+        window.open('https://wa.me/2630783545876?text=' + encodeURIComponent(waMsg), '_blank');
+        // Show success
+        document.getElementById('contactFormInner').style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+    }
+
+    // ── Smooth active nav link highlight on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navAs = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+        navAs.forEach(a => {
+            a.style.color = '';
+            if (a.getAttribute('href') === '#' + current) a.style.color = 'var(--blue)';
+        });
+    });
+</script>
+</body>
+</html>
